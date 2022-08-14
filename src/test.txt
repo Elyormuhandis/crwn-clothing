@@ -1,1 +1,2 @@
 I want to learn git and github
+I'm setting SSH protocol
