@@ -10,7 +10,7 @@ const shrinkLabelStyles = css`
   color: ${mainColor};
 `
 
-const FormInputLabel = styled.label`
+export const FormInputLabel = styled.label`
 
     color: ${subColor};
     font-size: 16px;
