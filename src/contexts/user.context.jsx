@@ -4,6 +4,8 @@ import {
     createUserDocumentFromAuth
  } from '../utils/firebase/firebase.utils'
 import { createAction } from "../utils/reducer/reducer.utils";
+
+
 export const UserContext = createContext({
     currentUser: null,
     setCurrentUser: () => null,
@@ -27,9 +29,9 @@ const userReducer = (state, action) => {
         }
         default:
             throw new Error(`Unhandled type ${type} in userReducer`)
-    }
+    };
 
-}
+};
 
 const INITIAL_STATE = {
     currentUser: null,
