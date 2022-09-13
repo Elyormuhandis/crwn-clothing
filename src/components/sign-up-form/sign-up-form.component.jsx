@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
+import { useState} from "react";
+import { useSelector } from "react-redux";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
-import {UserContext} from '../../contexts/user.context';
 import {createAuthUserWithEmailAndPassword, createUserDocumentFromAuth} from '../../utils/firebase/firebase.utils'
 import { SignUpContainer } from "./sign-up-form.styles";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 
 const defaultFormFields = {
@@ -19,7 +20,7 @@ const SignUpForm = () => {
     const [formFields, setFromFields] = useState(defaultFormFields);
     const {displayName, email, password, coniformPassword} = formFields;
 
-    const { setCurrentUser } = useContext(UserContext);
+    const setCurrentUser = useSelector(selectCurrentUser);
 
     const resetFormFields = () => {
         setFromFields(defaultFormFields)
