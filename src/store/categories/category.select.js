@@ -18,7 +18,7 @@ state.categories.categories
 
 
 
-export const selectCategoriesIsLoading = createSelector(
+export const selectIsLoading = createSelector(
   [selectCategoryReducer],
   (categoriesSlice) => categoriesSlice.isLoading
 );
